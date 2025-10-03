@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using TestUnitaire;
 
 namespace Maths_Matrices.Tests
 {

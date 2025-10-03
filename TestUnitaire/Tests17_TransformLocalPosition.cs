@@ -1,4 +1,6 @@
+using System.Numerics;
 using NUnit.Framework;
+using TestUnitaire;
 
 namespace Maths_Matrices.Tests
 {
@@ -13,18 +15,18 @@ namespace Maths_Matrices.Tests
             Transform t = new Transform();
             
             //Default Position
-            Assert.AreEqual(0f, t.LocalPosition.x);
-            Assert.AreEqual(0f, t.LocalPosition.y);
-            Assert.AreEqual(0f, t.LocalPosition.z);
+            Assert.That(t.LocalPosition.x, Is.EqualTo(0f));
+            Assert.That(t.LocalPosition.y, Is.EqualTo(0f));
+            Assert.That(t.LocalPosition.z, Is.EqualTo(0f));
 
             //Default Translation Matrix
-            Assert.AreEqual(new[,]
+            Assert.That(t.LocalTranslationMatrix.ToArray2D(), Is.EqualTo(new[,]
             {
                 { 1f, 0f, 0f, 0f },
                 { 0f, 1f, 0f, 0f },
                 { 0f, 0f, 1f, 0f },
                 { 0f, 0f, 0f, 1f },
-            }, t.LocalTranslationMatrix.ToArray2D());
+            }));
             
             GlobalSettings.DefaultFloatingPointTolerance = 0.0d;
         }
@@ -38,13 +40,13 @@ namespace Maths_Matrices.Tests
             
             //Translation
             t.LocalPosition = new Vector3(5f, 2f, 1f);
-            Assert.AreEqual(new[,]
+            Assert.That(t.LocalTranslationMatrix.ToArray2D(), Is.EqualTo(new[,]
             {
                 { 1f, 0f, 0f, 5f },
                 { 0f, 1f, 0f, 2f },
                 { 0f, 0f, 1f, 1f },
                 { 0f, 0f, 0f, 1f },
-            }, t.LocalTranslationMatrix.ToArray2D());
+            }));
 
             GlobalSettings.DefaultFloatingPointTolerance = 0.0d;
         }

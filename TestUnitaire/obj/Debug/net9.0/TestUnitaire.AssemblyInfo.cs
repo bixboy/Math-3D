@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TestUnitaire")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b200c707d1d40c38630161537b1ba8dffb88028e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99de876662616c0d30b855479915cd2209166d28")]
 [assembly: System.Reflection.AssemblyProductAttribute("TestUnitaire")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TestUnitaire")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

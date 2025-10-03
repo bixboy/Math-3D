@@ -238,6 +238,30 @@ namespace TestUnitaire
             return inv;
         }
         
+        public static MatrixFloat Multiply(MatrixFloat left, MatrixFloat right)
+        {
+            if (left.NbColumns != right.NbLines)
+                throw new ArgumentException("Number of columns of the left matrix must match number of lines of the right matrix.");
+
+            MatrixFloat result = new MatrixFloat(left.NbLines, right.NbColumns);
+
+            for (int i = 0; i < left.NbLines; i++)
+            {
+                for (int j = 0; j < right.NbColumns; j++)
+                {
+                    float sum = 0f;
+                    for (int k = 0; k < left.NbColumns; k++)
+                        sum += left[i, k] * right[k, j];
+
+                    result[i, j] = sum;
+                }
+            }
+
+            return result;
+        }
+
+        public static MatrixFloat operator *(MatrixFloat left, MatrixFloat right) => Multiply(left, right);
+        
         public static Vector4 operator *(MatrixFloat matrix, Vector4 vector)
         {
             if (matrix.NbColumns != 4 || matrix.NbLines != 4)
