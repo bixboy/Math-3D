@@ -1,0 +1,15 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3d6315da_002D86d9_002D47c8_002Dbb05_002Db6ec759e9947/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Tests01_NewMatrices.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;ProjectFile&gt;1BE603E5-27C2-41C9-BF80-4116E52C3E1F/f:Tests01_NewMatrices.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;1BE603E5-27C2-41C9-BF80-4116E52C3E1F/f:Tests02_CopyAndModifyMatrices.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;1BE603E5-27C2-41C9-BF80-4116E52C3E1F/f:Tests03_IdentityMatrices.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;1BE603E5-27C2-41C9-BF80-4116E52C3E1F/f:Tests04_ScalarMultiplication.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;1BE603E5-27C2-41C9-BF80-4116E52C3E1F/f:Tests05_MatricesAddAndSubtract.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;1BE603E5-27C2-41C9-BF80-4116E52C3E1F/f:Tests07_TransposeMatrices.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;1BE603E5-27C2-41C9-BF80-4116E52C3E1F/f:Tests06_MatricesMultiplication.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;1BE603E5-27C2-41C9-BF80-4116E52C3E1F/f:Tests10_RowReduction.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;1BE603E5-27C2-41C9-BF80-4116E52C3E1F/f:Tests09_AugmentedMatricesAndSplit.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;1BE603E5-27C2-41C9-BF80-4116E52C3E1F/f:Tests08_ElementaryOperations.cs&lt;/ProjectFile&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
