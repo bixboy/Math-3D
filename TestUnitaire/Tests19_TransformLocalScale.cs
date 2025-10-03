@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using TestUnitaire;
 
 namespace Maths_Matrices.Tests
 {
@@ -13,12 +14,12 @@ namespace Maths_Matrices.Tests
             Transform t = new Transform();
 
             //Default Scale
-            Assert.AreEqual(1f, t.LocalScale.x);
-            Assert.AreEqual(1f, t.LocalScale.y);
-            Assert.AreEqual(1f, t.LocalScale.z);
+            Assert.That(t.LocalScale.x, Is.EqualTo(1f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(t.LocalScale.y, Is.EqualTo(1f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(t.LocalScale.z, Is.EqualTo(1f).Within(GlobalSettings.DefaultFloatingPointTolerance));
             
             //Default Matrix
-            Assert.AreEqual(new[,]
+            AssertMatrixAlmostEqual(new[,]
             {
                 { 1f, 0f, 0f, 0f },
                 { 0f, 1f, 0f, 0f },
@@ -38,7 +39,7 @@ namespace Maths_Matrices.Tests
 
             //Scale X
             t.LocalScale = new Vector3(2f, 1f, 1f);
-            Assert.AreEqual(new[,]
+            AssertMatrixAlmostEqual(new[,]
             {
                 { 2f, 0f, 0f, 0f },
                 { 0f, 1f, 0f, 0f },
@@ -48,7 +49,7 @@ namespace Maths_Matrices.Tests
             
             //Scale Y
             t.LocalScale = new Vector3(1f, 5f, 1f);
-            Assert.AreEqual(new[,]
+            AssertMatrixAlmostEqual(new[,]
             {
                 { 1f, 0f, 0f, 0f },
                 { 0f, 5f, 0f, 0f },
@@ -58,7 +59,7 @@ namespace Maths_Matrices.Tests
             
             //Scale Z
             t.LocalScale = new Vector3(1f, 1f, 23f);
-            Assert.AreEqual(new[,]
+            AssertMatrixAlmostEqual(new[,]
             {
                 { 1f, 0f, 0f, 0f },
                 { 0f, 1f, 0f, 0f },
@@ -67,6 +68,20 @@ namespace Maths_Matrices.Tests
             }, t.LocalScaleMatrix.ToArray2D());
             
             GlobalSettings.DefaultFloatingPointTolerance = 0.0d;
+        }
+        
+        private static void AssertMatrixAlmostEqual(float[,] expected, float[,] actual)
+        {
+            Assert.That(actual.GetLength(0), Is.EqualTo(expected.GetLength(0)));
+            Assert.That(actual.GetLength(1), Is.EqualTo(expected.GetLength(1)));
+
+            for (int i = 0; i < expected.GetLength(0); i++)
+            {
+                for (int j = 0; j < expected.GetLength(1); j++)
+                {
+                    Assert.That(actual[i, j], Is.EqualTo(expected[i, j]).Within(GlobalSettings.DefaultFloatingPointTolerance));
+                }
+            }
         }
     }
 }

@@ -1,4 +1,10 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2fd95c3f_002D0f23_002D4e6c_002Db9bf_002D346d1489a2ab/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Tests10_RowReduction.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;ProjectFile&gt;FF63AD7A-CC93-4A87-896B-075CD4F9A7DD/f:Tests16_TransformationMatrices.cs&lt;/ProjectFile&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;ProjectFile&gt;FF63AD7A-CC93-4A87-896B-075CD4F9A7DD/f:Tests16_TransformationMatrices.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;FF63AD7A-CC93-4A87-896B-075CD4F9A7DD/f:Tests17_TransformLocalPosition.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;FF63AD7A-CC93-4A87-896B-075CD4F9A7DD/f:Tests18_TransformLocalRotations.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;FF63AD7A-CC93-4A87-896B-075CD4F9A7DD/f:Tests19_TransformLocalScale.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;FF63AD7A-CC93-4A87-896B-075CD4F9A7DD/f:Tests20_TransformLocalEverything.cs&lt;/ProjectFile&gt;&#xD;
+  &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
