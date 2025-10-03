@@ -1,4 +1,6 @@
-﻿namespace TestUnitaire
+﻿using System.Numerics;
+
+namespace TestUnitaire
 {
     public static class GlobalSettings
     {
@@ -234,6 +236,19 @@
             }
 
             return inv;
+        }
+        
+        public static Vector4 operator *(MatrixFloat matrix, Vector4 vector)
+        {
+            if (matrix.NbColumns != 4 || matrix.NbLines != 4)
+                throw new ArgumentException("Matrix must be 4x4 to multiply with a Vector4.");
+
+            float x = matrix[0, 0] * vector.X + matrix[0, 1] * vector.Y + matrix[0, 2] * vector.Z + matrix[0, 3] * vector.W;
+            float y = matrix[1, 0] * vector.X + matrix[1, 1] * vector.Y + matrix[1, 2] * vector.Z + matrix[1, 3] * vector.W;
+            float z = matrix[2, 0] * vector.X + matrix[2, 1] * vector.Y + matrix[2, 2] * vector.Z + matrix[2, 3] * vector.W;
+            float w = matrix[3, 0] * vector.X + matrix[3, 1] * vector.Y + matrix[3, 2] * vector.Z + matrix[3, 3] * vector.W;
+
+            return new Vector4(x, y, z, w);
         }
     }
 }

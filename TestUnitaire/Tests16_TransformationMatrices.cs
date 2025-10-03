@@ -23,19 +23,19 @@ namespace Maths_Matrices.Tests
             });
 
             Vector4 vTransformed = m * v;
-            Assert.AreEqual(vTransformed.x, 6f);
-            Assert.AreEqual(vTransformed.y, 3f);
-            Assert.AreEqual(vTransformed.z, 1f);
+            Assert.That(vTransformed.X, Is.EqualTo(6f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformed.Y, Is.EqualTo(3f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformed.Z, Is.EqualTo(1f).Within(GlobalSettings.DefaultFloatingPointTolerance));
 
             Vector4 vTransformedInverted = m.InvertByRowReduction() * vTransformed;
-            Assert.AreEqual(1f, vTransformedInverted.x);
-            Assert.AreEqual(0f, vTransformedInverted.y);
-            Assert.AreEqual(0f, vTransformedInverted.z);
+            Assert.That(vTransformedInverted.X, Is.EqualTo(1f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformedInverted.Y, Is.EqualTo(0f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformedInverted.Z, Is.EqualTo(0f).Within(GlobalSettings.DefaultFloatingPointTolerance));
 
             vTransformedInverted = m.InvertByDeterminant() * vTransformed;
-            Assert.AreEqual(1f, vTransformedInverted.x);
-            Assert.AreEqual(0f, vTransformedInverted.y);
-            Assert.AreEqual(0f, vTransformedInverted.z);
+            Assert.That(vTransformedInverted.X, Is.EqualTo(1f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformedInverted.Y, Is.EqualTo(0f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformedInverted.Z, Is.EqualTo(0f).Within(GlobalSettings.DefaultFloatingPointTolerance));
 
             GlobalSettings.DefaultFloatingPointTolerance = 0.0d;
         }
@@ -53,22 +53,22 @@ namespace Maths_Matrices.Tests
                 { 0f, 0f, 1f, 1f },
                 { 0f, 0f, 0f, 1f },
             });
+            
             Vector4 vTransformed = m * v;
-
-            Assert.AreEqual(1f, vTransformed.x);
-            Assert.AreEqual(0f, vTransformed.y);
-            Assert.AreEqual(0f, vTransformed.z);
+            Assert.That(vTransformed.X, Is.EqualTo(1f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformed.Y, Is.EqualTo(0f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformed.Z, Is.EqualTo(0f).Within(GlobalSettings.DefaultFloatingPointTolerance));
 
             Vector4 vTransformedInverted = m.InvertByRowReduction() * vTransformed;
-            Assert.AreEqual(1f, vTransformedInverted.x);
-            Assert.AreEqual(0f, vTransformedInverted.y);
-            Assert.AreEqual(0f, vTransformedInverted.z);
+            Assert.That(vTransformedInverted.X, Is.EqualTo(1f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformedInverted.Y, Is.EqualTo(0f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformedInverted.Z, Is.EqualTo(0f).Within(GlobalSettings.DefaultFloatingPointTolerance));
 
             vTransformedInverted = m.InvertByDeterminant() * vTransformed;
             GlobalSettings.DefaultFloatingPointTolerance = 0.001d;
-            Assert.AreEqual(1f, vTransformedInverted.x);
-            Assert.AreEqual(0f, vTransformedInverted.y);
-            Assert.AreEqual(0f, vTransformedInverted.z);
+            Assert.That(vTransformedInverted.X, Is.EqualTo(1f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformedInverted.Y, Is.EqualTo(0f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformedInverted.Z, Is.EqualTo(0f).Within(GlobalSettings.DefaultFloatingPointTolerance));
 
             GlobalSettings.DefaultFloatingPointTolerance = 0.0d;
         }
@@ -88,19 +88,19 @@ namespace Maths_Matrices.Tests
             });
 
             Vector4 vTransformed = m * v;
-            Assert.AreEqual(1f, vTransformed.x);
-            Assert.AreEqual(2f, vTransformed.y);
-            Assert.AreEqual(9f, vTransformed.z);
+            Assert.That(vTransformed.X, Is.EqualTo(1f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformed.Y, Is.EqualTo(2f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformed.Z, Is.EqualTo(9f).Within(GlobalSettings.DefaultFloatingPointTolerance));
 
             Vector4 vTransformedInverted = m.InvertByRowReduction() * vTransformed;
-            Assert.AreEqual(2f, vTransformedInverted.x);
-            Assert.AreEqual(1f, vTransformedInverted.y);
-            Assert.AreEqual(3f, vTransformedInverted.z);
+            Assert.That(vTransformedInverted.X, Is.EqualTo(2f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformedInverted.Y, Is.EqualTo(1f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformedInverted.Z, Is.EqualTo(3f).Within(GlobalSettings.DefaultFloatingPointTolerance));
 
             vTransformedInverted = m.InvertByDeterminant() * vTransformed;
-            Assert.AreEqual(2f, vTransformedInverted.x);
-            Assert.AreEqual(1f, vTransformedInverted.y);
-            Assert.AreEqual(3f, vTransformedInverted.z);
+            Assert.That(vTransformedInverted.X, Is.EqualTo(2f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformedInverted.Y, Is.EqualTo(1f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformedInverted.Z, Is.EqualTo(3f).Within(GlobalSettings.DefaultFloatingPointTolerance));
 
             GlobalSettings.DefaultFloatingPointTolerance = 0.0d;
         }
@@ -123,19 +123,19 @@ namespace Maths_Matrices.Tests
             });
 
             Vector4 vTransformed = m * v;
-            Assert.AreEqual(-4f, vTransformed.x);
-            Assert.AreEqual(1f, vTransformed.y);
-            Assert.AreEqual(7f, vTransformed.z);
+            Assert.That(vTransformed.X, Is.EqualTo(-4f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformed.Y, Is.EqualTo(1f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformed.Z, Is.EqualTo(7f).Within(GlobalSettings.DefaultFloatingPointTolerance));
 
             Vector4 vTransformedInverted = m.InvertByRowReduction() * vTransformed;
-            Assert.AreEqual(1f, vTransformedInverted.x);
-            Assert.AreEqual(4f, vTransformedInverted.y);
-            Assert.AreEqual(7f, vTransformedInverted.z);
+            Assert.That(vTransformedInverted.X, Is.EqualTo(1f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformedInverted.Y, Is.EqualTo(4f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformedInverted.Z, Is.EqualTo(7f).Within(GlobalSettings.DefaultFloatingPointTolerance));
 
             vTransformedInverted = m.InvertByDeterminant() * vTransformed;
-            Assert.AreEqual(1f, vTransformedInverted.x);
-            Assert.AreEqual(4f, vTransformedInverted.y);
-            Assert.AreEqual(7f, vTransformedInverted.z);
+            Assert.That(vTransformedInverted.X, Is.EqualTo(1f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformedInverted.Y, Is.EqualTo(4f).Within(GlobalSettings.DefaultFloatingPointTolerance));
+            Assert.That(vTransformedInverted.Z, Is.EqualTo(7f).Within(GlobalSettings.DefaultFloatingPointTolerance));
 
             GlobalSettings.DefaultFloatingPointTolerance = 0.0d;
         }
